@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Head of College Challenge</title>
+
+</head>
+
+<body>
+    <div class="game-container">
+    <div id="selection-screen">
+        <img src="HoCIntro.jpg" />
+        <p id="intro-p">Where would you like to visit?</p>
+        <button id="Mandarin-button" onclick="showPuzzle('Mandarin')">Mandarin Centre</button>
+        <button id="SebFaulks-button" onclick="showPuzzle('SebFaulks')">Sebastian Faulks Building</button>
+        <button id="Library-button" onclick="showPuzzle('Library')">Mallinson Library</button>
+        <button id="VandA-button" onclick="showPuzzle('VandA')">V and A Cafe</button>
+
+        <div id="final" class="hidden">
+            <p>You have solved all four puzzles. Where do you think the final location is?</p>
+            <input type="text" id="finalanswer" placeholder="Enter your answer">
+            <button onclick="checkFinalAnswer('finalanswer', 'Masters Study', 'final')">Submit</button>
+        </div>
+    </div>
+
+    <div id="Mandarin" class="hidden">
+        <img src="HoCMandarin.jpg" />
+        <input type="text" id="answer1" placeholder="Enter your answer">
+        <button onclick="checkAnswer('answer1', 'Top Half', 'Mandarin')">Submit</button>
+    </div>
+    <div id="Mandarin-complete" class="hidden">
+        <p>Well done! You solved the Mandarin Puzzle!</p>
+        <p>You now know the final location is in the <strong>Top Half</strong>!</p>
+        <button onclick="returnToSelection('Mandarin')">Return to Map</button>
+    </div>
+
+    <div id="SebFaulks" class="hidden">
+        <img src="HoCSebFaulks.jpg" />
+        <input type="text" id="answer2" placeholder="Enter your answer">
+        <button onclick="checkAnswer('answer2', 'Even Row', 'SebFaulks')">Submit</button>
+    </div>
+    <div id="SebFaulks-complete" class="hidden">
+        <p>Well done! You solved the Sebastian Faulks Puzzle!</p>
+        <p>You now know the final location is in an <strong>Even Row</strong>!</p>
+        <button onclick="returnToSelection('SebFaulks')">Return to Map</button>
+    </div>
+
+    <div id="Library" class="hidden">
+        <img src="HoCLibrary.jpg" />
+        <input type="text" id="answer3" placeholder="Enter your answer">
+        <button onclick="checkAnswer('answer3', 'Even Column', 'Library')">Submit</button>
+    </div>
+    <div id="Library-complete" class="hidden">
+        <p>Well done! You solved the Library Puzzle!</p>
+        <p>You now know the final location is in an <strong>Even Column</strong>!</p>
+        <button onclick="returnToSelection('Library')">Return to Map</button>
+    </div>
+
+    <div id="VandA" class="hidden">
+        <img src="HoCVandA.jpg" />
+        <input type="text" id="answer4" placeholder="Enter your answer">
+        <button onclick="checkAnswer('answer4', 'Left Half', 'VandA')">Submit</button>
+    </div>
+    <div id="VandA-complete" class="hidden">
+        <p>Well done! You solved the V and A Puzzle!</p>
+        <p>You now know the final location is in the <strong>Left Half</strong>!</p>
+        <button onclick="returnToSelection('VandA')">Return to Map</button>
+    </div>
+
+    <div id="final-complete" class="hidden">
+        <p>Congratulations! You have completed all the puzzles!</p>
+        <img src="HoCOutro.jpg" />
+    </div>
+    </div>
+</body>
+<script src="javascript.js"></script>
+</html>
